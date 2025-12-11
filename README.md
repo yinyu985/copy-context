@@ -28,7 +28,7 @@ The original extension is licensed under the MIT License, and this fork maintain
    - Right-click a tab title → **Copy Content (This Tab)** or **… (All Open Tabs)**.
 
 3. **Editor Selection**
-   - Select text in an editor → right-click → **Copy Selection**
+   - Select text in an editor → right-click → **Copy Selection as context**
 
 4. **Paste** anywhere and your Markdown snippet or tree is on the clipboard
 
@@ -50,22 +50,20 @@ The original extension is licensed under the MIT License, and this fork maintain
 
 ![copy-context-tabs](https://github.com/user-attachments/assets/2483793c-b0ec-4c96-a633-74c5a5fcea8f)
 
-### Copy Selection
+### Copy Selection as context
 
 - Copy selected text from the active editor with context information
 - Includes file path and line numbers in the output
 - Maintains syntax highlighting with proper language detection
 - Respects the same size limits as other copy operations
 
-**Copy Selection** output format:
+**Copy Selection as context** output format:
 
 ```
 // src/example.ts:10-15
 ```typescript
 // src/example.ts:10-15
 selected code here
-```
-
 ```
 
 ### Copy Tree
@@ -78,6 +76,47 @@ selected code here
 **Copy Tree**
 
 ![copy-tree](https://github.com/user-attachments/assets/d30c0f79-c978-4e4d-980d-ca55fa2e0fda)
+
+---
+
+## 📦 Build & Installation
+
+### Building the Extension
+
+1. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+2. **Build the extension**:
+
+   ```bash
+   npm run build
+   ```
+
+3. **Package the extension**:
+
+   ```bash
+   # Install vsce if not already installed
+   npm install -g @vscode/vsce
+
+   # Package the extension
+   vsce package
+   ```
+
+4. **Install the extension locally**:
+
+   ```bash
+   code --install-extension copy-code-context-9.9.9.vsix
+   ```
+
+### Installation from VSIX
+
+1. Download the `copy-code-context-9.9.9.vsix` file from the [Releases](https://github.com/yinyu985/copy-context/releases) page
+2. Open VS Code
+3. Go to Extensions → Click the three dots → Install from VSIX...
+4. Select the downloaded VSIX file
 
 ---
 
@@ -106,6 +145,7 @@ You can override filters for specific commands. These are **merged** with the gl
 | `copyContext.copyTree.includeGlobs`       | `[]`       | Additional include patterns for **Copy Tree** only.                                                   |
 
 **Example:** Exclude test files globally, but include them when copying content:
+
 ```json
 {
   "copyContext.excludeGlobs": ["**/*.test.ts"],

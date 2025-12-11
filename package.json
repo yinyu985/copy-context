@@ -27,7 +27,7 @@
 			},
 			{
 				"command": "extension.copySelection",
-				"title": "Copy Selection"
+				"title": "Copy Selection as context"
 			}
 		],
 		"configuration": [
