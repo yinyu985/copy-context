@@ -166,6 +166,7 @@
 			"editor/context": [
 				{
 					"command": "extension.copySelection",
+					"title": "Copy Selection as context",
 					"group": "1_copycode@3",
 					"when": "editorHasSelection"
 				}
