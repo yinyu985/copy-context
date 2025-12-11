@@ -3,8 +3,18 @@
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/Fralle.copy-code-context)
 ![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/Fralle.copy-code-context)
 ![Visual Studio Marketplace Last Updated](https://img.shields.io/visual-studio-marketplace/last-updated/Fralle.copy-code-context)
-  
+
 Copy files or folder trees into your clipboard as Markdown. Ready to paste into AI, chats, docs, or code reviews.
+
+## 📝 About This Fork
+
+This is a fork of the original [Copy Context](https://github.com/Fralleee/copy-context) extension by Roland Chelwing, with additional features and improvements:
+
+### Added Features
+
+- **Copy Selection**: Copy selected text from the active editor with context information (file path and line numbers)
+
+The original extension is licensed under the MIT License, and this fork maintains the same license.
 
 ---
 
@@ -17,7 +27,10 @@ Copy files or folder trees into your clipboard as Markdown. Ready to paste into 
 2. **Editor Tab**
    - Right-click a tab title → **Copy Content (This Tab)** or **… (All Open Tabs)**.
 
-3. **Paste** anywhere and your Markdown snippet or tree is on the clipboard
+3. **Editor Selection**
+   - Select text in an editor → right-click → **Copy Selection**
+
+4. **Paste** anywhere and your Markdown snippet or tree is on the clipboard
 
 ---
 
@@ -36,6 +49,24 @@ Copy files or folder trees into your clipboard as Markdown. Ready to paste into 
 **Copy Content (Tabs)**
 
 ![copy-context-tabs](https://github.com/user-attachments/assets/2483793c-b0ec-4c96-a633-74c5a5fcea8f)
+
+### Copy Selection
+
+- Copy selected text from the active editor with context information
+- Includes file path and line numbers in the output
+- Maintains syntax highlighting with proper language detection
+- Respects the same size limits as other copy operations
+
+**Copy Selection** output format:
+
+```
+// src/example.ts:10-15
+```typescript
+// src/example.ts:10-15
+selected code here
+```
+
+```
 
 ### Copy Tree
 

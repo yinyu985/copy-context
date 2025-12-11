@@ -1,8 +1,8 @@
 {
 	"activationEvents": [],
 	"author": {
-		"email": "roland.chelwing@gmail.com",
-		"name": "Roland Chelwing"
+		"email": "yinyu985@gmail.com",
+		"name": "Yates"
 	},
 	"categories": [
 		"Other"
@@ -199,7 +199,7 @@
 		"minimatch": "^5.1.2",
 		"posthog-node": "^4.17.2"
 	},
-	"description": "Copies selected files/folders as Markdown code content or tree",
+	"description": "Fork of Copy Context - Copies selected files/folders as Markdown code content or tree with additional features",
 	"devDependencies": {
 		"@biomejs/biome": "^2.0.0",
 		"@semantic-release/changelog": "^6.0.3",
@@ -225,7 +225,7 @@
 	"engines": {
 		"vscode": "^1.96.0"
 	},
-	"homepage": "https://github.com/Fralleee/copy-context#readme",
+	"homepage": "https://github.com/yinyu985/copy-context#readme",
 	"icon": "images/icon.png",
 	"keywords": [
 		"copy",
@@ -248,10 +248,10 @@
 	"license": "MIT",
 	"main": "./out/extension.js",
 	"name": "copy-code-context",
-	"publisher": "fralle",
+	"publisher": "yinyu985",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Fralleee/copy-context.git"
+		"url": "https://github.com/yinyu985/copy-context.git"
 	},
 	"scripts": {
 		"build": "npm run esbuild-base",
@@ -266,5 +266,5 @@
 		"vscode:prepublish": "npm run esbuild-base -- --production",
 		"watch": "npm run esbuild-base -- --watch"
 	},
-	"version": "0.8.0"
+	"version": "9.9.9"
 }
